@@ -2,12 +2,8 @@ const mongoose = require("mongoose");
 
 const TeamScheme = new mongoose.Schema(
   {
-    name: { 
-      type: String,
-      unique: true
-    },
-    position: Number,
-    logo: String,
+    equipo: String,
+    posicion: Number,
     partidos_jugados: Number,
     ganados: Number,
     empatados: Number,
