@@ -14,6 +14,7 @@ const leaderboardController = {
 
       $("table tbody tr").each((index, element) => {
         const posicion = $(element).find("td:nth-child(1)").text().trim();
+        const logo = $(element).find("td:nth-child(2) img").attr("src");
         const equipo = $(element)
           .find("td:nth-child(2) span.d-md-inline")
           .text()
@@ -44,6 +45,7 @@ const leaderboardController = {
 
         posiciones.push({
           posicion,
+          logo,
           equipo,
           partidos_jugados,
           partidos_ganados,
