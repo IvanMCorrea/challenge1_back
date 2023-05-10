@@ -62,19 +62,8 @@ const leaderboardController = {
           await newTeam.save();
         })
       );
-
-      res.status(200).send({
-        status: true,
-        msg: "Data loaded",
-        data: posiciones,
-      });
     } catch (error) {
       console.log(error);
-      res.status(409).send({
-        status: false,
-        msg: "Error getting data",
-        error: error,
-      });
     }
   },
 

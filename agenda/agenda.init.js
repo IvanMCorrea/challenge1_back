@@ -21,7 +21,7 @@ const InitAgenda = () => {
   agenda.define("CHECK POSITIONS", async (job, done) => {
     console.log("[AGENDA] 🪙🪙 Checking positions...");
 
-    leaderboardController.getLeaderboard();
+    leaderboardController.scrapper();
 
     done();
   });

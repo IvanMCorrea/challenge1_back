@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@hokify/agenda": "^6.3.0",
+    "agenda": "^5.0.0",
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
