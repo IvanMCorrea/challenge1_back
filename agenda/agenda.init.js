@@ -1,6 +1,7 @@
 const Agenda = require("agenda");
 const path = require("path");
 const DB_URI = process.env.DB_URI;
+
 const leaderboardController = require(path.join(
   __dirname,
   "..",
@@ -35,7 +36,8 @@ const InitAgenda = () => {
     tomorrowMidnight.setHours(0, 0, 0, 0);
 
     checkPositionsJob.schedule(tomorrowMidnight);
-    checkPositionsJob.repeatEvery("1 day");
+    const interval = process.env.CHECK_TIME || "1 day";
+    checkPositionsJob.repeatEvery(interval);
     checkPositionsJob.save();
 
     agenda.start();
